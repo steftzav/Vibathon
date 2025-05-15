@@ -1,0 +1,46 @@
+This is a SOF (statement of facts) issued from vessel Jag Laxmi.
+Every SOF should be signed & stamped (Mostly hand signature) by 3 parties.
+1) The vessel/master
+2) The Agent
+3) The Terminal/Port
+Could you please confirm the same is applicable for this attached SOF?
+i can see 3 different signatures with blue at the bottom of the page.
+Can you confirm ? Respond in a format:
+Vessel/Master: (tick or X)
+Agent: (tick or X)
+Terminal: (tick or X) ####Vessel SOF (5).pdf####
+@@@@
+Ok so i will be giving you documents SOF and you check if they are signed by all the corresponding 3 parties
+Page 1 is the vessel's sof. please do same and tell me. Respond in a format:
+Vessel/Master: (tick or X)
+Agent: (tick or X)
+Terminal: (tick or X) ####ALL S.O.F.pdf####
+@@@@
+Always check at the bottom and respond with a check if signature exists or red X if signature is missing for these parts:
+vessel , agent, terminal. Respond in a format:
+Vessel/Master: (tick or X)
+Agent: (tick or X)
+Terminal: (tick or X) ####AGENT S.O.F (1).pdf####
+@@@@
+Always check at the bottom and respond with a check if signature exists or red X if signature is missing for these parts:
+vessel , agent, terminal. Respond in a format:
+Vessel/Master: (tick or X)
+Agent: (tick or X)
+Terminal: (tick or X) ####Vessel SOF (2).pdf####
+@@@@
+Always check at the bottom and respond with a check if signature exists or red X if signature is missing for these parts:
+vessel , agent, terminal. Respond in a format:
+Vessel/Master: (tick or X)
+Agent: (tick or X)
+Terminal: (tick or X) ####Agent SOF (3).pdf####
+@@@@
+Next step is i want to filter out some of the documents.
+We want to only keep the SOFs, the NORs and the LOPs for this checking
+Ok next step. SOFs must have present 3 of the signatures.
+Rest of the documents must have vessel's signature and one more at least. so if vessels +1 signature is present dont show X red mark
+ok but dont show the X in the other docs besides the SOFs. i see agent X when vessel +1 from terminal is present
+good. cut the rule compliance note. Also for SOF if an lop mentioning same is present pls mention it so it gets overwritten
+next step. if an an nor tendered/retendered timing is mentioned in the SOF, it should also exists as a document with the same datetime mentioned
+ok lets make this check and new section after all signatures are checked.
+1) Signatures check for SOF/Timesheet, NOR(Tendered/Retendered), LOP(Letter of Protest)
+2) Nors present as per vessels SOF timings. Checkmark green or red X mentioning the missmatch ####Vessel Docs.pdf####

@@ -1,0 +1,296 @@
+body {
+  background-color: white;
+  /* border-top: 100px solid #333333; Removed */
+}
+
+.file-upload-container {
+  max-width: 12000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+.upload-description {
+  margin-bottom: 1rem;
+  text-align: center; /* Assuming you want to keep it centered */
+  line-height: 1.5; /* Added to prevent letter cropping */
+  padding-top: 0.25rem; /* Added for a bit more vertical space */
+  padding-bottom: 0.5rem; /* Increased from 0.25rem */
+}
+
+.error-message {
+  color: red;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+}
+
+.success-message {
+  color: green;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.drop-zone.dragging {
+  border-color: #007bff;
+  background-color: #e8f4ff;
+}
+
+.drop-zone-text {
+  color: black;
+}
+
+.drop-zone-text p {
+  margin: 0.5rem 0;
+}
+
+.file-limit-text {
+  color: black;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.file-input {
+  display: none;
+}
+
+.browse-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.browse-button:hover {
+  background-color: #0056b3;
+}
+
+.file-list {
+  margin-top: 2rem;
+}
+
+.file-list h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.file-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.file-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.file-list li:hover {
+  transform: translateX(5px);
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.file-name {
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.file-size {
+  color: black;
+  font-size: 0.85rem;
+}
+
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+  transform: rotate(90deg);
+}
+
+.remove-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+}
+
+.upload-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.upload-progress {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #28a745, #20c997);
+  transition: width 0.3s ease;
+}
+
+/* Styles for the new Perform Checks button, adapted from FeedExamples.css */
+.perform-checks-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem; /* Slightly adjusted padding */
+  border-radius: 6px; /* Slightly more rounded corners */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500; /* Medium font weight */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%; /* Make it full width within its container */
+  max-width: 500px; /* Consistent max-width */
+  margin-top: 1rem; /* Add some space above it if it's in the success message block */
+  margin-bottom: 0.5rem; /* Add some space below it */
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perform-checks-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.perform-checks-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* New styles for two-column layout */
+.file-upload-main-content {
+  display: flex;
+  gap: 1rem; /* Space between columns */
+}
+
+.file-upload-left-column {
+  flex: 1; /* Adjust flex-basis or use percentages for specific widths */
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload-right-column {
+  flex: 1; /* Adjust flex-basis or use percentages for specific widths */
+  max-height: 400px; /* Re-added to define when overflow occurs */
+  overflow-y: auto;  /* Re-added to show vertical scrollbar when needed */
+  overflow-x: hidden; /* Added to prevent horizontal scrollbar */
+}
+
+/* Ensure the main upload button container in the left column behaves as expected */
+.main-upload-button-container {
+  /* margin-top: auto; Pushes the button to the bottom of the left column if space allows */
+  /* This rule is removed to allow .drop-zone to center itself. */
+  /* The .button-container class still provides a margin-top: 1rem if needed. */
+}
+
+/* Style for the top left logo - REMOVED
+.top-left-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50px; 
+  width: auto; 
+  z-index: 1000; 
+}
+*/
+
+.file-upload-container {
+  /* ... existing code ... */
+} 
