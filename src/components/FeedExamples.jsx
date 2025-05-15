@@ -71,7 +71,7 @@ const FeedExamples = ({ disabled, setAppLoading }) => {
     };
 
     try {
-      const filesListResponse = await fetch('http://localhost:3000/api/examples');
+      const filesListResponse = await fetch('https://vibathon.onrender.com/api/examples');
       const filesData = await filesListResponse.json();
       appendToLog(`Files in public/examples directory: ${JSON.stringify(filesData.files, null, 2)}`);
       appendToLog('\n---\n');

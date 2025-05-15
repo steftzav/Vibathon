@@ -143,7 +143,7 @@ const FileUpload = ({ setAppLoading }) => {
       formData.append('files', file);
 
       try {
-        const response = await fetch('http://localhost:3000/upload', {
+        const response = await fetch('https://vibathon.onrender.com/upload', {
           method: 'POST',
           body: formData,
         });
@@ -232,7 +232,7 @@ const FileUpload = ({ setAppLoading }) => {
       for (const uploadedFile of lastUploadedFiles) {
         try {
           // Fetch from server's /uploads directory where files are stored by server.cjs
-          const fileFetchResponse = await fetch(`http://localhost:3000/uploads/${uploadedFile.name}`);
+          const fileFetchResponse = await fetch(`https://vibathon.onrender.com/uploads/${uploadedFile.name}`);
           if (!fileFetchResponse.ok) {
             throw new Error(`Fetch failed for ${uploadedFile.name}: ${fileFetchResponse.status}`);
           }
